@@ -1,3 +1,4 @@
+colorscheme ron
 syntax on
 
 " 表示関連
@@ -12,9 +13,11 @@ set scrolloff=8
 " エンコード関連
 set enc=utf-8
 set fenc=utf-8
+set fileencodings=utf-8,shift-jis
 
 " インデント関連
 set tabstop=4
+set expandtab
 set smartindent
 
 " 検索関連
@@ -33,4 +36,6 @@ nnoremap sk <C-w>k
 nnoremap sh <C-w>h
 nnoremap sl <C-w>l
 
+set backspace=indent,eol,start
 set clipboard=unnamed,unnamedplus
+
