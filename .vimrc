@@ -53,6 +53,7 @@ call dein#begin(expand('~/.vim/dein'))
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/unite.vim')
+call dein#add('davidhalter/jedi-vim')
 
 call dein#end()
 
