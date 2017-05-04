@@ -1,6 +1,3 @@
-colorscheme ron
-syntax on
-
 " 表示関連
 set list "不可視文字表示
 set number "行番号を表示
@@ -58,3 +55,7 @@ call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/unite.vim')
 
 call dein#end()
+
+" dein#end()のあとに書かないと反映されない
+colorscheme ron
+syntax on
