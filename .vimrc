@@ -2,6 +2,7 @@ colorscheme ron
 syntax on
 
 " 表示関連
+set list "不可視文字表示
 set number "行番号を表示
 set cursorline
 set title "編集中のファイル名を表示
@@ -10,13 +11,18 @@ set autoread
 set laststatus=2
 set scrolloff=8
 
+" コマンド関連
+set wildmenu 
+set showcmd
+
 " エンコード関連
 set enc=utf-8
 set fenc=utf-8
 set fileencodings=utf-8,shift-jis
 
 " インデント関連
-set tabstop=4
+set tabstop=4 "タグ文字の幅
+set shiftwidth=4 "自動で挿入されるインデントの幅
 set expandtab
 set smartindent
 
@@ -39,3 +45,16 @@ nnoremap sl <C-w>l
 set backspace=indent,eol,start
 set clipboard=unnamed,unnamedplus
 
+" dein.vimの設定
+if &compatible 
+    set nocompatible
+endif
+set runtimepath+=/Users/juri/.vim/dein/dein.vim
+
+call dein#begin(expand('~/.vim/dein'))
+
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+
+call dein#end()
