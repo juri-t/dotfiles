@@ -38,6 +38,7 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sh <C-w>h
 nnoremap sl <C-w>l
+nnoremap F :!autopep8 -i %<CR>
 
 set backspace=indent,eol,start
 set clipboard=unnamed,unnamedplus
