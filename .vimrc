@@ -47,7 +47,7 @@ set clipboard=unnamed,unnamedplus
 if &compatible 
     set nocompatible
 endif
-set runtimepath+=/Users/juri/.vim/dein/dein.vim
+set runtimepath+=~/.vim/dein/dein.vim
 
 call dein#begin(expand('~/.vim/dein'))
 
