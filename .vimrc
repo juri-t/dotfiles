@@ -57,6 +57,8 @@ call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimproc.vim', {'build': {'mac' : 'make -f make_mac.mak', }, })
 call dein#add('Shougo/neomru.vim')
 call dein#add('davidhalter/jedi-vim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
 
 call dein#end()
 
