@@ -1,5 +1,6 @@
 " 表示関連
 set list "不可視文字表示
+set listchars=tab:>-,trail:-
 set number "行番号を表示
 set cursorline
 set title "編集中のファイル名を表示
@@ -121,3 +122,27 @@ function! s:unite_my_settings()"{{{
     nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
     inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
 endfunction"}}}
+
+" neosnippetの設定（コピペ）
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+let g:neosnippet#snippets_directory='~/.vim/dein/vim-snippets/snippets'
