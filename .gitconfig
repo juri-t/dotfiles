@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Juri.Takahashi
+	email = puyo24.juri.takahashi@gmail.com
+[core]
+	editor = /usr/local/bin/vim
+[alias]
+	st = status
+	cm = commit
+	last = log --oneline --no-merges

@@ -20,7 +20,6 @@ set fileencodings=utf-8,shift-jis
 " インデント関連
 set tabstop=4 "タグ文字の幅
 set shiftwidth=4 "自動で挿入されるインデントの幅
-set expandtab
 set smartindent
 
 " 検索関連
@@ -38,7 +37,6 @@ nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sh <C-w>h
 nnoremap sl <C-w>l
-nnoremap F :!autopep8 -i %<CR>
 
 set backspace=indent,eol,start
 set clipboard=unnamed,unnamedplus
@@ -59,6 +57,9 @@ call dein#add('Shougo/neomru.vim')
 call dein#add('davidhalter/jedi-vim')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
+call dein#add('posva/vim-vue')
+call dein#add('fatih/vim-go')
+call dein#add('tpope/vim-fugitive')
 
 call dein#end()
 
@@ -114,7 +115,7 @@ function! s:unite_my_settings()"{{{
     "ctrl+jで縦に分割して開く
     nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
     inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-    "ctrl+jで横に分割して開く
+    "ctrl+lで横に分割して開く
     nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
     inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
     "ctrl+oでその場所に開く
