@@ -1,5 +1,5 @@
 " 表示関連
-set list "不可視文字表示
+"set list "不可視文字表示
 set number "行番号を表示
 set cursorline
 set title "編集中のファイル名を表示
@@ -60,6 +60,7 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('posva/vim-vue')
 call dein#add('fatih/vim-go')
 call dein#add('tpope/vim-fugitive')
+call dein#add('mechatroner/rainbow_csv')
 
 call dein#end()
 
