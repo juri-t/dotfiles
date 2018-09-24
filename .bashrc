@@ -14,4 +14,4 @@ PS1='\n\[\e[1;32m\]\u@\h \[\e[1;36m\]\w\[\e[1;31m\]$(__git_ps1)\n\[\e[0m\]\$ '
 
 # Macのbashのディレクトリが見づらいのでカラー変更
 export LSCOLORS=cxfxcxdxbxegedabagacad
-export PYTHONPATH="$HOME/anaconda/lib/python3.6/site-packages:$HOME/git/working_jupyter/lib"
+export PYTHONPATH="$HOME/anaconda/lib/python3.6/site-packages"
