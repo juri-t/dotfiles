@@ -8,4 +8,5 @@
 [alias]
 	st = status
 	cm = commit
+	co = checkout
 	last = log --oneline --no-merges
