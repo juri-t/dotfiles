@@ -5,8 +5,12 @@ alias sed='gsed'
 alias python='python3'
 alias pip='pip3'
 
+source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-prompt.sh
+source /usr/local/Cellar/git/2.12.2/etc/bash_completion.d/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
+
 # コンソールの表示を見やすく
-PS1='\n\[\e[36m\][\D{%Y/%M/%d %a} \t] \[\e[1;31m\]\w \n\$\[\e[0m\] '
+PS1='\n\[\e[1;32m\]\u@\h \[\e[1;36m\]\w\[\e[1;31m\]$(__git_ps1)\n\[\e[0m\]\$ '
 
 # Macのbashのディレクトリが見づらいのでカラー変更
 export LSCOLORS=cxfxcxdxbxegedabagacad
