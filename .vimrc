@@ -1,5 +1,5 @@
 " 表示関連
-"set list "不可視文字表示
+" set list "不可視文字表示
 set listchars=tab:>-,trail:-
 set number "行番号を表示
 set cursorline
