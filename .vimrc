@@ -148,3 +148,5 @@ if has('conceal')
 endif
 
 let g:neosnippet#snippets_directory='~/.vim/dein/vim-snippets/snippets'
+
+let g:copilot_filetypes = { 'gitcommit': v:true }
