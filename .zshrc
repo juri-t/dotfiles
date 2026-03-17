@@ -3,6 +3,8 @@ bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
+eval "$(anyenv init -)"
+
 typeset -U path PATH
 
 path=(
@@ -29,8 +31,6 @@ command -v gsed >/dev/null 2>&1 && alias sed='gsed'
 [ -f /opt/homebrew/etc/bash_completion.d/git-prompt.sh ] && source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 [ -f "$HOME/.secrets.zsh" ] && source "$HOME/.secrets.zsh"
-
-eval "$(anyenv init -)"
 
 setopt PROMPT_SUBST
 fpath=(~/.zsh/completion $fpath)
