@@ -30,7 +30,6 @@ export LSCOLORS=cxfxcxdxbxegedabagacad
 
 source "$HOME/.docker/init-zsh.sh" || true
 
-
 alias python=python3
 alias pip=pip3
 alias ls='ls -G'
@@ -44,7 +43,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 setopt PROMPT_SUBST
 fpath=(~/.zsh/completion $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/completion/git-completion.bash
 autoload -U compinit
 compinit
 
