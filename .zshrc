@@ -3,15 +3,24 @@ bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
-typeset -U path PATH
-
 path=(
   /opt/homebrew/bin
   /usr/local/sbin
+  $path
+)
+
+export PATH
+
+eval "$(anyenv init -)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+typeset -U path PATH
+
+path=(
   /usr/local/opt/mysql-client/bin
   /opt/homebrew/opt/mysql-client@8.0/bin
   /Applications/IntelliJ\ IDEA.app/Contents/MacOS
   "$HOME/.local/bin"
+  "$HOME/go/bin"
   /opt/homebrew/opt/crowdin@4/bin
   $path
 )
@@ -20,7 +29,6 @@ export PATH
 export LSCOLORS=cxfxcxdxbxegedabagacad
 
 source "$HOME/.docker/init-zsh.sh" || true
-eval "$(anyenv init -)"
 
 
 alias python=python3
