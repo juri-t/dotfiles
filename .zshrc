@@ -3,8 +3,6 @@ bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
 
-eval "$(anyenv init -)"
-
 typeset -U path PATH
 
 path=(
@@ -20,6 +18,10 @@ path=(
 
 export PATH
 export LSCOLORS=cxfxcxdxbxegedabagacad
+
+source "$HOME/.docker/init-zsh.sh" || true
+eval "$(anyenv init -)"
+
 
 alias python=python3
 alias pip=pip3
