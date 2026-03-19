@@ -21,6 +21,7 @@ path=(
   /Applications/IntelliJ\ IDEA.app/Contents/MacOS
   "$HOME/.local/bin"
   "$HOME/go/bin"
+  "$HOME/.deno/bin"
   /opt/homebrew/opt/crowdin@4/bin
   $path
 )
