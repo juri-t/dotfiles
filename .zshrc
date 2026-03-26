@@ -29,7 +29,7 @@ path=(
 export PATH
 export LSCOLORS=cxfxcxdxbxegedabagacad
 
-source "$HOME/.docker/init-zsh.sh" || true
+[ -f "$HOME/.docker/init-zsh.sh" ] && source "$HOME/.docker/init-zsh.sh"
 
 alias python=python3
 alias pip=pip3
