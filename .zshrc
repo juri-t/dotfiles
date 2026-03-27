@@ -74,6 +74,21 @@ wcd() {
   cd "$HOME/projects/worktree/$1"
 }
 
+_wcd() {
+  local base_dir="$HOME/projects/worktree"
+
+  if [[ ! -d "$base_dir" ]]; then
+    return 1
+  fi
+
+  local -a dirs
+  dirs=(${base_dir}/*(/N:t))
+
+  _describe 'worktree branches' dirs
+}
+
+compdef _wcd wcd
+
 _wt_setup_claude() {
   [ -z "$1" ] && return 1
 
