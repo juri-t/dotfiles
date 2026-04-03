@@ -46,11 +46,13 @@ set clipboard=unnamed,unnamedplus
 if &compatible 
     set nocompatible
 endif
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+let s:dein_base = '~/.cache/dein'
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+execute 'set runtimepath+=' . s:dein_src
 
-call dein#begin(expand('~/.vim/dein'))
+call dein#begin(s:dein_base)
 
-call dein#add('Shougo/dein.vim')
+call dein#add(s:dein_src)
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimproc.vim', {'build': {'mac' : 'make -f make_mac.mak', }, })
@@ -62,8 +64,13 @@ call dein#add('posva/vim-vue')
 call dein#add('fatih/vim-go')
 call dein#add('tpope/vim-fugitive')
 call dein#add('mechatroner/rainbow_csv')
+call dein#add('leafgarland/typescript-vim')
 
 call dein#end()
+
+if dein#check_install()
+  call dein#install()
+endif
 
 " dein#end()のあとに書かないと反映されない
 colorscheme ron
@@ -150,3 +157,7 @@ endif
 let g:neosnippet#snippets_directory='~/.vim/dein/vim-snippets/snippets'
 
 let g:copilot_filetypes = { 'gitcommit': v:true }
+
+" TypeScript
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript
